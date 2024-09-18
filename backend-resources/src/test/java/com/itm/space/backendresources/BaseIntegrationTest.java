@@ -17,7 +17,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 @AutoConfigureMockMvc
 public abstract class BaseIntegrationTest {
 
-    private final ObjectWriter contentWriter = new ObjectMapper()
+    protected final ObjectWriter contentWriter = new ObjectMapper()
             .configure(SerializationFeature.WRAP_ROOT_VALUE, false)
             .writer()
             .withDefaultPrettyPrinter();
